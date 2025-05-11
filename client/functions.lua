@@ -38,7 +38,8 @@ function ESX.IsPlayerLoaded()
 end
 
 function ESX.GetPlayerData()
-	return ESX.PlayerData
+	ESX.PlayerData.inventory = exports['qs-advancedinventory']:getUserInventory()
+    return ESX.PlayerData
 end
 
 function ESX.SearchInventory(items, count)
